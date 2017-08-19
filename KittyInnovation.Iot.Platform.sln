@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovaton.Iot.Platfrom.Service", "KittyInnovaton.Iot.Platfrom.Service", "{D63C1DEF-4291-4AF1-9EFD-72A47F57A307}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovaton.Iot.Platfrom.UI", "KittyInnovaton.Iot.Platfrom.UI", "{18B3440C-6B3B-49DF-9EB4-2EDB09CA8732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WebApi", "KittyInnovation.Iot.Platform.WebApi\KittyInnovation.Iot.Platform.WebApi.csproj", "{40BA8382-572E-43F7-8A03-FD1915370A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WebApi.Tests", "KittyInnovation.Iot.Platform.WebApi.Tests\KittyInnovation.Iot.Platform.WebApi.Tests.csproj", "{3031C91A-C0DA-4FE5-A148-391339C0AD1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.Web", "KittyInnovation.Iot.Platform.Web\KittyInnovation.Iot.Platform.Web.csproj", "{AD5683E5-5F3C-405F-9810-62522FBE6E6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40BA8382-572E-43F7-8A03-FD1915370A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BA8382-572E-43F7-8A03-FD1915370A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BA8382-572E-43F7-8A03-FD1915370A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BA8382-572E-43F7-8A03-FD1915370A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3031C91A-C0DA-4FE5-A148-391339C0AD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3031C91A-C0DA-4FE5-A148-391339C0AD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3031C91A-C0DA-4FE5-A148-391339C0AD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3031C91A-C0DA-4FE5-A148-391339C0AD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5683E5-5F3C-405F-9810-62522FBE6E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5683E5-5F3C-405F-9810-62522FBE6E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5683E5-5F3C-405F-9810-62522FBE6E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5683E5-5F3C-405F-9810-62522FBE6E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40BA8382-572E-43F7-8A03-FD1915370A40} = {D63C1DEF-4291-4AF1-9EFD-72A47F57A307}
+		{3031C91A-C0DA-4FE5-A148-391339C0AD1D} = {D63C1DEF-4291-4AF1-9EFD-72A47F57A307}
+		{AD5683E5-5F3C-405F-9810-62522FBE6E6B} = {18B3440C-6B3B-49DF-9EB4-2EDB09CA8732}
+	EndGlobalSection
+EndGlobal
