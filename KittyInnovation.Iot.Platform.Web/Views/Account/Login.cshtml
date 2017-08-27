@@ -1,9 +1,9 @@
 ﻿@using KittyInnovation.Iot.Platform.Web.Models
+
 @model LoginViewModel
 @{
     ViewBag.Title = "Log in";
 }
-
 <h2>@ViewBag.Title.</h2>
 <div class="row">
     <div class="col-md-8">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+                        <input type="button" value="Log in" id="btn_login" class="btn btn-default" />
                     </div>
                 </div>
                 <p>
@@ -60,4 +60,28 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">
+    $(function () {
+        $('#btn_login').click(function () {
+            var userName = $('#Email').val();
+            var password = $('#Password').val();
+            $.ajax({
+                type:'GET',
+                url: 'http://localhost:90/api/user/login',
+                data: { userName, password },
+                success: function (data, status) {
+                    window.location.href = '/home?username='+data.UserName+'&ticket='+data.Ticket;
+                    console.log(data);
+                    console.log(status);
+                },
+                error: function (e) {
+                    console.log(e);
+                },
+                complete: function () {
+                    console.log('success')
+                }
+            });
+        })
+    });
+</script>
 }

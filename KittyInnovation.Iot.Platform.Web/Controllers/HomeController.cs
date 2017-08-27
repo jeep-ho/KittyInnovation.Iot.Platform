@@ -8,8 +8,10 @@ namespace KittyInnovation.Iot.Platform.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string userName,string ticket)
         {
+            ViewBag.Ticket = ticket;
+            ViewBag.UserName = userName;
             return View();
         }
 

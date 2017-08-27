@@ -13,5 +13,16 @@ namespace KittyInnovation.Iot.Platform.WebApi
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
+
+        public override void Init()
+        {
+            PostAuthenticateRequest += WebApiApplication_PostAuthenticateRequest;
+            base.Init();
+        }
+
+        private void WebApiApplication_PostAuthenticateRequest(object sender, EventArgs e)
+        {
+            HttpContext.Current.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior.Required);
+        }
     }
 }
