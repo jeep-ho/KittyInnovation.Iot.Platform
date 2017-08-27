@@ -13,41 +13,68 @@ namespace KittyInnovation.Iot.Platform.Rabbitmq.Sender
     {
         static void Main(string[] args)
         {
-            var factory = new ConnectionFactory();
-            factory.HostName = "localhost";
-            factory.UserName = "hezp";
-            factory.Password = "123456";
-            using (var connection = factory.CreateConnection())
+            for (int i = 0; i < 10000; i++)
             {
-                using (var channel = connection.CreateModel())
-                {
-                    channel.ExchangeDeclare("direct_logs", "direct");//交换机
-                    var severity = (args.Length > 0) ? args[0] : "info";   
-                    string message = GetMessage(args);
-                    var properties = channel.CreateBasicProperties();
-                    properties.DeliveryMode = 2;
-                    properties.Persistent = true;
-                    var body = Encoding.UTF8.GetBytes(message);
-                    channel.BasicPublish("direct_logs", severity, properties, body);
-                    Console.WriteLine(" [x] Sent '{0}':'{1}'", severity, message);
-
-                    //channel.QueueDeclare("hello", true, false, false, null);
-                    //string message = GetMessage(args);
-                    //var properties = channel.CreateBasicProperties();
-                    //properties.DeliveryMode = 2;
-                    //properties.Persistent = true;
-                    //var body = Encoding.UTF8.GetBytes(message);
-                    //channel.BasicPublish("", "hello", properties, body);
-                    //Console.WriteLine(" set {0}", message);            
-                }
+                var rpcClient = new RPCClient();
+                Console.WriteLine(" [x] Requesting fib({0})",i);
+                var response = rpcClient.Call(i.ToString());
+                Console.WriteLine("[.] Get Result is '{0}'", response);
+                rpcClient.Close();
             }
             Console.WriteLine(" Press [enter] to exit.");
             Console.ReadLine();
         }
-        private static string GetMessage(string[] args)
+    }
+
+    class RPCClient
+    {
+        private IConnection connection;
+        private IModel channel;
+        private string replyQueueName;
+        private QueueingBasicConsumer consumer;
+
+        public RPCClient()
         {
-           return (args.Length > 1)
-                        ? string.Join(" ", args.Skip(1).ToArray()) : Guid.NewGuid().ToString();
+            var factory = new ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "hezp";
+            factory.Password = "123456";
+            connection = factory.CreateConnection();
+            channel = connection.CreateModel();
+            replyQueueName = channel.QueueDeclare().QueueName;
+            consumer = new QueueingBasicConsumer(channel);
+            channel.BasicConsume(replyQueueName, true, consumer);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public string Call(string message)
+        {
+            var corrId = Guid.NewGuid().ToString();
+            var props = channel.CreateBasicProperties();
+            props.ReplyTo = replyQueueName;
+            props.CorrelationId = corrId;
+
+            var messageBytes = Encoding.UTF8.GetBytes(message);
+            channel.BasicPublish("", "rpc_queue", props, messageBytes);
+
+            while (true)
+            {
+                var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
+                if(ea.BasicProperties.CorrelationId==corrId)
+                {
+                    return Encoding.UTF8.GetString(ea.Body);
+                }
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Close()
+        {
+            connection.Close();
         }
     }
 }
