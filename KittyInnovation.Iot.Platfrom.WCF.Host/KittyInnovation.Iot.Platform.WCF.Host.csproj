@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KittyInnovaton.Iot.Platfrom.WCF.Host</RootNamespace>
-    <AssemblyName>KittyInnovaton.Iot.Platfrom.WCF.Host</AssemblyName>
+    <RootNamespace>KittyInnovation.Iot.Platform.WCF.Host</RootNamespace>
+    <AssemblyName>KittyInnovation.Iot.Platform.WCF.Host</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <UseIISExpress>true</UseIISExpress>
@@ -85,9 +85,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KittyInnovaton.Iot.Platfrom.WCF.Server\KittyInnovaton.Iot.Platfrom.WCF.Server.csproj">
+    <ProjectReference Include="..\KittyInnovation.Iot.Platfrom.WCF.Server\KittyInnovation.Iot.Platform.WCF.Server.csproj">
       <Project>{395c444f-e6c5-4598-b0a3-1c4fbae81568}</Project>
-      <Name>KittyInnovaton.Iot.Platfrom.WCF.Server</Name>
+      <Name>KittyInnovation.Iot.Platform.WCF.Server</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -95,7 +95,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>KittyInnovaton.Iot.Platfrom.WCF.Host.Program</StartupObject>
+    <StartupObject>KittyInnovation.Iot.Platform.WCF.Host.Program</StartupObject>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -1,4 +1,4 @@
-﻿using KittyInnovaton.Iot.Platfrom.WCF.Server;
+﻿using KittyInnovation.Iot.Platform.WCF.Server;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,6 +13,10 @@ namespace KittyInnovation.Iot.Platform.WCF.Client
     {
         static void Main()
         {
+            ICallBackService callBackService = new CallBackService();
+            InstanceContext instanceContext = new InstanceContext(callBackService);
+
+            DuplexChannelFactory<ICalculatorService> calcfactory = new DuplexChannelFactory<ICalculatorService>(instanceContext, typeof(ICalculatorService).FullName);
             ChannelFactory<IOrderService> factory = new ChannelFactory<IOrderService>(typeof(IOrderService).FullName);
             Stopwatch watch = new Stopwatch();
             watch.Start();
@@ -20,8 +24,12 @@ namespace KittyInnovation.Iot.Platform.WCF.Client
             Parallel.For(0, 100, index =>
             {
                 IOrderService orderService = factory.CreateChannel();
-
                 orderService.CreateOrder("编号" + index.ToString("D2"));
+                Console.WriteLine("Order->" + index.ToString("D2"));
+
+                ICalculatorService calcService = calcfactory.CreateChannel();
+                calcService.Add(index, 10);
+
             });
 
             watch.Stop();

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("KittyInnovaton.Iot.Platfrom.WCF.Host")]
+[assembly: AssemblyTitle("KittyInnovation.Iot.Platform.WCF.Host")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("KittyInnovaton.Iot.Platfrom.WCF.Host")]
+[assembly: AssemblyProduct("KittyInnovation.Iot.Platform.WCF.Host")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

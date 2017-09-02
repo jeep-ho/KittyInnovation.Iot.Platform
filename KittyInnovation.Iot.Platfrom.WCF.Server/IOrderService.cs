@@ -5,7 +5,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KittyInnovaton.Iot.Platfrom.WCF.Server
+namespace KittyInnovation.Iot.Platform.WCF.Server
 {
     /**************************
      Author:hezp
