@@ -19,7 +19,7 @@ namespace KittyInnovation.Iot.Platform.WCF.Host
             orderSvcHost.Open();
             calcSvcHost.Open();
 
-            Console.WriteLine("服务已启动...");
+            Console.WriteLine("Service is runing...");
             Console.ReadLine();
         }
     }

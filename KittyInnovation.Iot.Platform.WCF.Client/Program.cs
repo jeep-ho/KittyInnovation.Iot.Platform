@@ -23,11 +23,11 @@ namespace KittyInnovation.Iot.Platform.WCF.Client
 
             Parallel.For(0, 100, index =>
             {
-                IOrderService orderService = factory.CreateChannel();
-                using (orderService as IDisposable)
-                {
-                    orderService.CreateOrder("编号" + index.ToString("D2"));
-                }
+                //IOrderService orderService = factory.CreateChannel();
+                //using (orderService as IDisposable)
+                //{
+                //    orderService.CreateOrder("编号" + index.ToString("D2"));
+                //}
 
                 ICalculatorService calcService = calcfactory.CreateChannel();
 
