@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculatorService.cs" />
+    <Compile Include="CustomException.cs" />
     <Compile Include="ICalculatorService.cs" />
     <Compile Include="ICallBackService.cs" />
     <Compile Include="IOrderService.cs" />

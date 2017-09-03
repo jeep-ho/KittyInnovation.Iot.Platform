@@ -15,6 +15,7 @@ namespace KittyInnovation.Iot.Platform.WCF.Server
     public interface ICallBackService
     {
         [OperationContract]
+        [FaultContract(typeof(CustomException))]
         void DisplayResult(int x, int y, int result);
     }
 }

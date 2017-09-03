@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovation.Iot.Platform.Service", "KittyInnovation.Iot.Platform.Service", "{D63C1DEF-4291-4AF1-9EFD-72A47F57A307}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{D63C1DEF-4291-4AF1-9EFD-72A47F57A307}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovation.Iot.Platfrom.UI", "KittyInnovation.Iot.Platfrom.UI", "{18B3440C-6B3B-49DF-9EB4-2EDB09CA8732}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{18B3440C-6B3B-49DF-9EB4-2EDB09CA8732}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WebApi", "KittyInnovation.Iot.Platform.WebApi\KittyInnovation.Iot.Platform.WebApi.csproj", "{40BA8382-572E-43F7-8A03-FD1915370A40}"
 EndProject
@@ -19,15 +19,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platfor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.Rabbitmq.Receiver", "KittyInnovation.Iot.Platform.Rabbitmq.Receiver\KittyInnovation.Iot.Platform.Rabbitmq.Receiver.csproj", "{0146B931-BC0A-4E47-9BDF-D017B540F3C9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovation.Iot.Platform.RabbitMQ", "KittyInnovation.Iot.Platform.RabbitMQ", "{6EE34BA2-3C8A-4FA0-B282-B0287FD29B6E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMq", "RabbitMq", "{6EE34BA2-3C8A-4FA0-B282-B0287FD29B6E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovation.Iot.Platform.WebApi", "KittyInnovation.Iot.Platform.WebApi", "{2D636797-1BF8-4045-8C0B-EA5C98D0AF7D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{2D636797-1BF8-4045-8C0B-EA5C98D0AF7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Client", "KittyInnovation.Iot.Platform.WCF.Client\KittyInnovation.Iot.Platform.WCF.Client.csproj", "{922653EF-5CED-412D-838E-3671037FBDC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Host", "KittyInnovation.Iot.Platform.WCF.Host\KittyInnovation.Iot.Platform.WCF.Host.csproj", "{77617222-8065-4E25-8EC7-695E5920CF6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Server", "KittyInnovation.Iot.Platform.WCF.Server\KittyInnovation.Iot.Platform.WCF.Server.csproj", "{395C444F-E6C5-4598-B0A3-1C4FBAE81568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F1668FA5-C57F-4997-B932-16DFF36A8FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.Data", "KittyInnovation.Iot.Platform.Data\KittyInnovation.Iot.Platform.Data.csproj", "{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.Domain", "KittyInnovation.Iot.Platform.Domain\KittyInnovation.Iot.Platform.Domain.csproj", "{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +77,14 @@ Global
 		{395C444F-E6C5-4598-B0A3-1C4FBAE81568}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395C444F-E6C5-4598-B0A3-1C4FBAE81568}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395C444F-E6C5-4598-B0A3-1C4FBAE81568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +99,7 @@ Global
 		{922653EF-5CED-412D-838E-3671037FBDC5} = {D63C1DEF-4291-4AF1-9EFD-72A47F57A307}
 		{77617222-8065-4E25-8EC7-695E5920CF6B} = {D63C1DEF-4291-4AF1-9EFD-72A47F57A307}
 		{395C444F-E6C5-4598-B0A3-1C4FBAE81568} = {D63C1DEF-4291-4AF1-9EFD-72A47F57A307}
+		{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6} = {F1668FA5-C57F-4997-B932-16DFF36A8FB6}
+		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746} = {F1668FA5-C57F-4997-B932-16DFF36A8FB6}
 	EndGlobalSection
 EndGlobal

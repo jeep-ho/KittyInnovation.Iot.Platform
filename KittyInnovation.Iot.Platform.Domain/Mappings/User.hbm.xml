@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+   assembly="KittyInnovation.Iot.Platform.Domain"
+   namespace="KittyInnovation.Iot.Platform.Domain.Entities">
+
+  <class name ="User">
+    <id name="Id" column ="Id">
+      <generator class ="native"/>
+    </id>
+    <property name ="UserName"/>
+    <property name ="Password"/>
+    <property name ="Phone"/>
+    <property name ="Tel"/>
+    <property name ="Email"/>
+    <property name ="IsSys"/>
+    <property name ="IP"/>
+    <property name ="CreateTime"/>
+    <property name ="ModifyTime"/>
+  </class>
+</hibernate-mapping>
