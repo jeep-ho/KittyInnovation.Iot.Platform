@@ -1,4 +1,5 @@
-﻿using KittyInnovation.Iot.Platform.WCF.Server;
+﻿
+using KittyInnovation.Iot.Platform.WCF.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;

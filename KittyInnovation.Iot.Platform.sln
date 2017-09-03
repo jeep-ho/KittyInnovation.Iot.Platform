@@ -25,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittyInnovation.Iot.Platfor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Client", "KittyInnovation.Iot.Platform.WCF.Client\KittyInnovation.Iot.Platform.WCF.Client.csproj", "{922653EF-5CED-412D-838E-3671037FBDC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Host", "KittyInnovation.Iot.Platfrom.WCF.Host\KittyInnovation.Iot.Platform.WCF.Host.csproj", "{77617222-8065-4E25-8EC7-695E5920CF6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Host", "KittyInnovation.Iot.Platform.WCF.Host\KittyInnovation.Iot.Platform.WCF.Host.csproj", "{77617222-8065-4E25-8EC7-695E5920CF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Server", "KittyInnovation.Iot.Platfrom.WCF.Server\KittyInnovation.Iot.Platform.WCF.Server.csproj", "{395C444F-E6C5-4598-B0A3-1C4FBAE81568}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.WCF.Server", "KittyInnovation.Iot.Platform.WCF.Server\KittyInnovation.Iot.Platform.WCF.Server.csproj", "{395C444F-E6C5-4598-B0A3-1C4FBAE81568}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

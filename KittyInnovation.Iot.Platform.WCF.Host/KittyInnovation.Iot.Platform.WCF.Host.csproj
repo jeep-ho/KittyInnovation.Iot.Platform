@@ -85,7 +85,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KittyInnovation.Iot.Platfrom.WCF.Server\KittyInnovation.Iot.Platform.WCF.Server.csproj">
+    <ProjectReference Include="..\KittyInnovation.Iot.Platform.WCF.Server\KittyInnovation.Iot.Platform.WCF.Server.csproj">
       <Project>{395c444f-e6c5-4598-b0a3-1c4fbae81568}</Project>
       <Name>KittyInnovation.Iot.Platform.WCF.Server</Name>
     </ProjectReference>
