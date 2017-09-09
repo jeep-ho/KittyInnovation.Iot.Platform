@@ -3,7 +3,7 @@
    assembly="KittyInnovation.Iot.Platform.Domain"
    namespace="KittyInnovation.Iot.Platform.Domain.Entities">
 
-  <class name ="User">
+  <class name ="User" table="User">
     <id name="Id" column ="Id">
       <generator class ="native"/>
     </id>
@@ -13,7 +13,6 @@
     <property name ="Tel"/>
     <property name ="Email"/>
     <property name ="IsSys"/>
-    <property name ="IP"/>
     <property name ="CreateTime"/>
     <property name ="ModifyTime"/>
   </class>

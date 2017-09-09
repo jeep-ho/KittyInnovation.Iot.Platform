@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{D63C1DEF-4291-4AF1-9EFD-72A47F57A307}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.Data", "KittyInnovation.Iot.Platform.Data\KittyInnovation.Iot.Platform.Data.csproj", "{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.Domain", "KittyInnovation.Iot.Platform.Domain\KittyInnovation.Iot.Platform.Domain.csproj", "{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyInnovation.Iot.Platform.NHibernateTest", "KittyInnovation.Iot.Platform.NHibernateTest\KittyInnovation.Iot.Platform.NHibernateTest.csproj", "{1EDB071D-D231-41DD-B551-A17124789B3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDB071D-D231-41DD-B551-A17124789B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDB071D-D231-41DD-B551-A17124789B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDB071D-D231-41DD-B551-A17124789B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDB071D-D231-41DD-B551-A17124789B3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +107,9 @@ Global
 		{395C444F-E6C5-4598-B0A3-1C4FBAE81568} = {D63C1DEF-4291-4AF1-9EFD-72A47F57A307}
 		{B281A155-FFED-4DB4-8FC9-61DB4A60CCE6} = {F1668FA5-C57F-4997-B932-16DFF36A8FB6}
 		{8C15EDC2-2DDB-43D9-9A16-D3C26C7AD746} = {F1668FA5-C57F-4997-B932-16DFF36A8FB6}
+		{1EDB071D-D231-41DD-B551-A17124789B3A} = {F1668FA5-C57F-4997-B932-16DFF36A8FB6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E94E7E16-5FF2-4400-AC86-20A7E1D5B8F6}
 	EndGlobalSection
 EndGlobal
