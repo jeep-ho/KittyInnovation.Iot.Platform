@@ -3,17 +3,21 @@
    assembly="KittyInnovation.Iot.Platform.Domain"
    namespace="KittyInnovation.Iot.Platform.Domain.Entities">
 
-  <class name ="User" table="User">
-    <id name="Id" column ="Id">
+  <class name ="User" table="User" lazy="true">
+    <id name="Id" column ="Id" type="int">
       <generator class ="native"/>
     </id>
-    <property name ="UserName"/>
-    <property name ="Password"/>
-    <property name ="Phone"/>
-    <property name ="Tel"/>
-    <property name ="Email"/>
-    <property name ="IsSys"/>
-    <property name ="CreateTime"/>
-    <property name ="ModifyTime"/>
+    <property name ="UserName" type="string"/>
+    <property name ="Password" type="string"/>
+    <property name ="Phone" type="string"/>
+    <property name ="Tel" type="string"/>
+    <property name ="Email" type="string"/>
+    <property name ="IsSys" type="bool"/>
+    <property name ="CreateTime" type="DateTime"/>
+    <property name ="ModifyTime" type="DateTime"/>
+    <set name="Logs">
+      <key column="UserId"/>
+      <one-to-many class="KittyInnovation.Iot.Platform.Domain.Entities.Log"/>
+    </set>
   </class>
 </hibernate-mapping>

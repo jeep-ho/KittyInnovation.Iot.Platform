@@ -20,9 +20,11 @@ namespace KittyInnovation.Iot.Platform.Domain.Entities
         public virtual string Phone { get; set; }
         public virtual string Tel { get; set; }
         public virtual string Email { get; set; }
-        public virtual int IsSys { get; set; }
+        public virtual bool IsSys { get; set; }
         public virtual string IP { get; set; }
         public virtual DateTime CreateTime { get; set; }
         public virtual DateTime? ModifyTime { get; set; }
+
+        public virtual ISet<Log> Logs { get; set; }
     }
 }

@@ -32,9 +32,12 @@ namespace KittyInnovation.Iot.Platform.Data
         {
             using (var session = NHibernateHelper.OpenSession())
             {
-                return session.Get<User>(id);
-
+                var user = session.Get<User>(id);
+                NHibernateUtil.Initialize(user.Logs);
+                return user;
             }
+            //var session = NHibernateHelper.OpenSession();
+            //return session.Get<User>(id);
         }
     }
 }
