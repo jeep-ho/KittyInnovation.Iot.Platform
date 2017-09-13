@@ -1,5 +1,6 @@
 ﻿using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,22 @@ namespace KittyInnovation.Iot.Platform.Data
             //通过工厂打开一个Session(会话)
             return factory.OpenSession();
         }
-
+        /// <summary>
+        /// 绑定当前会话
+        /// </summary>
+        private static void BindSession()
+        {
+            if (!CurrentSessionContext.HasBind(factory))
+                CurrentSessionContext.Bind(OpenSession());
+        }
+        /// <summary>
+        /// 获取当前会话
+        /// </summary>
+        /// <returns></returns>
+        public static ISession GetCurrentSession()
+        {
+            BindSession();
+            return factory.GetCurrentSession();
+        }
     }
 }

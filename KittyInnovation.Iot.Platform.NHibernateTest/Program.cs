@@ -25,6 +25,22 @@ namespace KittyInnovation.Iot.Platform.NHibernateTest
 
             var temp = log.GetLog(1);
             Console.WriteLine(string.Format("日志编号：{0},对应用户:{1}", temp.Id, temp.User.UserName));
+
+            Console.WriteLine(NHibernateHelper.GetCurrentSession().IsOpen);
+
+            var session1 = NHibernateHelper.GetCurrentSession();
+            var session2 = NHibernateHelper.GetCurrentSession();
+            Console.WriteLine(session1 == session2);
+
+            var hq1 = " from Log where UserId=?";
+            NHibernate.IQuery query = NHibernateHelper.GetCurrentSession().CreateQuery(hq1);
+            query.SetParameter(0, 2);
+            IList<Log> logs = query.List<Log>();
+            foreach (var mlog in logs)
+            {
+                Console.WriteLine(string.Format(" LogId:{0},LogTime:{1}", mlog.Id, mlog.LogTime));
+            }
+
             Console.ReadLine();
 
         }
